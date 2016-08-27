@@ -65,3 +65,4 @@ public class Anime {
     public Links links;
 
 }
+
