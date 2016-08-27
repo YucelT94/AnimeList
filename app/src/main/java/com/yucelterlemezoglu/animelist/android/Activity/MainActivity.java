@@ -1,4 +1,4 @@
-package com.yucelterlemezoglu.animelist.android.Activity;
+package com.yucelterlemezoglu.animelist.android.activity;
 
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
@@ -6,10 +6,9 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.yucelterlemezoglu.animelist.android.AssetsPropertyReader;
-import com.yucelterlemezoglu.animelist.android.Model.AnimeModel.Anime;
-import com.yucelterlemezoglu.animelist.android.Model.AnimeModel.AnimeModel;
+import com.yucelterlemezoglu.animelist.android.model.animeModel.AnimeModel;
 import com.yucelterlemezoglu.animelist.android.R;
-import com.yucelterlemezoglu.animelist.android.Service.AnimeService;
+import com.yucelterlemezoglu.animelist.android.service.AnimeService;
 
 import java.util.List;
 import java.util.Properties;
@@ -46,7 +45,8 @@ public class MainActivity extends AppCompatActivity {
 
         AnimeService service = retrofit.create(AnimeService.class);
 
-        Call<List<AnimeModel>> animeList = service.listAnime(ACCESS_KEY);
+        Call<List<AnimeModel>> animeList = service.listAnime(1,ACCESS_KEY);
+
 
         Log.v("AnimeModelList", "index=" + animeList);
 

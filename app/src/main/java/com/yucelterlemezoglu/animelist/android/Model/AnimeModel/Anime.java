@@ -1,5 +1,5 @@
 
-package com.yucelterlemezoglu.animelist.android.Model.AnimeModel;
+package com.yucelterlemezoglu.animelist.android.model.animeModel;
 
 import java.util.ArrayList;
 import java.util.List;
