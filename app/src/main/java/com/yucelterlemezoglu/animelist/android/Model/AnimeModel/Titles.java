@@ -11,12 +11,12 @@ public class Titles {
     public String canonical;
     @SerializedName("english")
     @Expose
-    public String english;
+    public Object english;
     @SerializedName("romaji")
     @Expose
     public String romaji;
     @SerializedName("japanese")
     @Expose
-    public String japanese;
+    public Object japanese;
 
 }

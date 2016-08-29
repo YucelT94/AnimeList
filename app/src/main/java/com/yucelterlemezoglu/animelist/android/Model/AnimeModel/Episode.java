@@ -14,15 +14,15 @@ public class Episode {
     public String title;
     @SerializedName("synopsis")
     @Expose
-    public String synopsis;
+    public Object synopsis;
     @SerializedName("airdate")
     @Expose
-    public String airdate;
+    public Object airdate;
     @SerializedName("number")
     @Expose
     public Integer number;
     @SerializedName("season_number")
     @Expose
-    public Integer seasonNumber;
+    public Object seasonNumber;
 
 }

@@ -11,7 +11,7 @@ public class Linked {
 
     @SerializedName("gallery_images")
     @Expose
-    public List<GalleryImage> galleryImages = new ArrayList<GalleryImage>();
+    public List<Object> galleryImages = new ArrayList<Object>();
     @SerializedName("episodes")
     @Expose
     public List<Episode> episodes = new ArrayList<Episode>();

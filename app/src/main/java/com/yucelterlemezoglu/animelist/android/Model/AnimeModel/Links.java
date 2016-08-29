@@ -11,7 +11,7 @@ public class Links {
 
     @SerializedName("gallery_images")
     @Expose
-    public List<Integer> galleryImages = new ArrayList<Integer>();
+    public List<Object> galleryImages = new ArrayList<Object>();
     @SerializedName("episodes")
     @Expose
     public List<Integer> episodes = new ArrayList<Integer>();

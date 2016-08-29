@@ -20,16 +20,16 @@ public class Anime {
     public String slug;
     @SerializedName("synopsis")
     @Expose
-    public String synopsis;
+    public Object synopsis;
     @SerializedName("started_airing_date")
     @Expose
     public String startedAiringDate;
     @SerializedName("finished_airing_date")
     @Expose
-    public String finishedAiringDate;
+    public Object finishedAiringDate;
     @SerializedName("youtube_video_id")
     @Expose
-    public String youtubeVideoId;
+    public Object youtubeVideoId;
     @SerializedName("age_rating")
     @Expose
     public String ageRating;
@@ -65,4 +65,3 @@ public class Anime {
     public Links links;
 
 }
-
