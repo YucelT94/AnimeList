@@ -14,11 +14,10 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
-import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
 import com.yucelterlemezoglu.animelist.android.AnimeModelToList;
 import com.yucelterlemezoglu.animelist.android.R;
 import com.yucelterlemezoglu.animelist.android.adapter.AnimeRecyclerViewAdapter;
@@ -27,30 +26,27 @@ import com.yucelterlemezoglu.animelist.android.model.animeModel.AnimeModel;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.yucelterlemezoglu.animelist.android.AnimeModelToList.animeModelList;
+
 public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private AnimeRecyclerViewAdapter adapter;
-    private List<AnimeModel> animeModelList;
-
-    AnimeModelToList animeModelToList;
-    AnimeRecyclerViewAdapter animeRecyclerViewAdapter;
+    private List<AnimeModel> animeModels;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        animeModelList = animeModelToList.animeModelList();
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        animeModelList();
 
         initCollapsingToolbar();
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
 
-        animeModelList = new ArrayList<>();
-        adapter = new AnimeRecyclerViewAdapter(this, animeModelList);
+        animeModels = new ArrayList<>();
+        adapter = new AnimeRecyclerViewAdapter(this, animeModels);
 
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 2);
         recyclerView.setLayoutManager(mLayoutManager);

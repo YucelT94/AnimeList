@@ -7,6 +7,8 @@
     android:background="@android:color/white"
     android:fitsSystemWindows="true">
 
+    <include layout="@layout/content_main" />
+
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"
         android:layout_width="match_parent"
@@ -35,7 +37,8 @@
                     android:layout_height="match_parent"
                     android:fitsSystemWindows="true"
                     android:scaleType="centerCrop"
-                    app:layout_collapseMode="parallax" />
+                    app:layout_collapseMode="parallax"
+                    android:src="@drawable/cover"/>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -45,7 +48,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/anime_list"
+                        android:id="@+id/love_music"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/backdrop_title"
@@ -72,7 +75,5 @@
         </android.support.design.widget.CollapsingToolbarLayout>
 
     </android.support.design.widget.AppBarLayout>
-
-    <include layout="@layout/content_main" />
 
 </android.support.design.widget.CoordinatorLayout>

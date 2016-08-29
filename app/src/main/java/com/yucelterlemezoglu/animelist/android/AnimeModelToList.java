@@ -18,29 +18,20 @@ import retrofit2.Response;
  */
 public class AnimeModelToList {
 
-    private static List<AnimeModel> animeModels = new ArrayList<>();
+    private static List<AnimeModel> animeModels = new ArrayList<AnimeModel>();
 
     public static List<AnimeModel> animeModelList() {
 
         AnimeService animeService = AnimeClient.getClient().create(AnimeService.class);
         for (int i = 0; i < 20; i++) {
 
-
-
-            Call<AnimeModel> call = animeService.animeDetail((int)(Math.random()*12515));
+            Call<AnimeModel> call = animeService.animeDetail((int) (Math.random() * 12515));
 
             call.enqueue(new Callback<AnimeModel>() {
                 @Override
                 public void onResponse(Call<AnimeModel> call, Response<AnimeModel> response) {
                     if (response.isSuccessful()) {
-
                         animeModels.add(response.body());
-
-                        try {
-                            Log.v("TEST", "Name : " + response.body().anime.titles.romaji);
-                        } catch (Exception e) {
-                            Log.e("TEST", "Error : " + e.toString());
-                        }
                     }
                 }
 
@@ -50,9 +41,7 @@ public class AnimeModelToList {
                 }
             });
         }
-
+        Log.e("TEST", "Anime Model = " + animeModels.toString());
         return animeModels;
     }
-
-
 }

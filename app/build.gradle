@@ -41,11 +41,7 @@ dependencies {
     //Butter Knife
     compile 'com.jakewharton:butterknife:8.0.1'
 
-    //Glide
-    compile 'com.github.bumptech.glide:glide:3.7.0'
-
-    
-
+    //Design Support Library
     compile 'com.android.support:appcompat-v7:22.2.1'
     compile 'com.android.support:design:22.2.1'
 }
